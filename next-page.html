@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Felices 4 Meses</title>
+        <link rel="icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="next-page.css">
+        <link rel="stylesheet" href="general.css">
+        <link rel="stylesheet" href="variables.css">
+    </head>
+
+    <body>
+        <main>
+            <div class="text-wrapper">
+                <div>
+                    <h1 class="name">Diana Itzel Lopez Avila</h1>
+                    <p class="subtitle">Te amo, gracias por ser mi novia</p>
+                </div>
+                <div id="counter">
+                    <h2 class="counter-name">Gracias por este tiempo  tan bonito juntos</h2>
+                    <div id="countdown"></div>
+                </div>
+            </div>
+            <div class="text-wrapper">
+                <div id="things-list"> 
+                    <h2 class="things-i-like">Cosas que me gustan mucho de ti ❤</h2>
+                    <p class="like-box"> Tu personalidad y tu actitud </p>
+                    <p class="like-box"> Tu compresion y paciencia </p>
+                    <p class="like-box"> Tu manera de amar tan bonita </p>
+                    <p class="like-box"> Tu gran corazon, que ama muy bonito, como nadie lo hace</p>
+                    <p class="like-box"> Lo hermosa y maravillosa que eres, tanto fisica como emocionalmente</p>
+                </div>
+            </div>
+            <div class="text-wrapper-letter"> 
+                <img src="images/aniversario.jpg" alt="Aniversario" class="aniversario-img">
+                
+                <div class="letter-text">
+                    <h2 class="letter">Como es de costumbre, aqui hay una cartita para ti </h2>
+            
+                    <p class="letter-style"> Ya han pasado 4 meses desde que decidimos ser novios, desde que empezamos a estar juntos y por fin podernos decir el uno al otro y vernos como una pareja. 
+
+                     Mi amor, sinceramente me he sentido muy bien en estos 4 meses, contigo la relacion fluye de una manera muy bonita, siento que nos complementamos muy bien y ademas, siento que las cosas a tu lado van a algun lado. Me has hecho querer mejorar cada dia, levantarme y pensar que literalmente estoy viviendo un sueño, porque estar contigo es como un sueño hecho realidad. </p>
+
+                    <p class="letter-style">  En este tiempo he aprendido mucho de ti, he aprendido a amarte y adorar todas las cosas que te hacen ser tu. Dianita, eres la persona mas especial que he conocido, la persona que mas amo y que siempre amare, la persona que siempre escogere sin importar que. </p>
+
+                    <p class="letter-style">  Siempre voy a estar para ti, siempre voy a querer estar contigo, quiero que en un futuro podamos estar juntos casados, tener la casita de la que hemos hablado, con el jardin que tanto quieres, con un lindo gatito que sea nuestro y no menos importante, una hijita que se parezca a cada uno de los dos, y podamos llamar Silvia.
+
+                        Princesa, contigo veo un futuro duradero, contigo veo que las cosas se iluminan y la verdad es que quiero que seas tu, porque nadie me ha hecho sentir todo lo que me haces sentir tu y se que nadie mas lo hara. Te prometo que a pesar de cualquier cosa siempre voy a querer estar a tu lado, celebrando tus metas, apoyandote en tus luchas y admirando como creces. Gracias por estos 4 meses, Te amo demasiado tesoro. </p>
+                </div>
+            </div>     
+            <div class="footer-style">
+                <p> Espero te haya gustado esto que te hice, Te amoooo</p>
+                <img src="images/cinna.png" alt="cinna" class="cinna-footer">
+            </div>
+            
+            
+        </main>
+         <script>
+            function updateCountdown() {
+                const targetDate = new Date("2025-04-16T00:00:00");
+                const now = new Date();
+                const diff = now - targetDate; 
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").innerHTML = `
+                    <div class="time-box">
+                        <div class="time-number">${days}</div>
+                        <div class="time-label">Días</div>
+                    </div>
+                    <div class="time-box">
+                        <div class="time-number">${hours}</div>
+                        <div class="time-label">Horas</div>
+                    </div>
+                    <div class="time-box">
+                        <div class="time-number">${minutes}</div>
+                        <div class="time-label">Minutos</div>
+                    </div>
+                    <div class="time-box">
+                        <div class="time-number">${seconds}</div>
+                        <div class="time-label">Segundos</div>
+                    </div>
+                `;
+            }
+            setInterval(updateCountdown, 1000);
+            updateCountdown();
+        </script>
+    </body>
+</html>

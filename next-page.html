@@ -57,7 +57,7 @@
         </main>
          <script>
             function updateCountdown() {
-                const targetDate = new Date("2025-04-16T00:00:00");
+                const targetDate = new Date("2025-04-16T00:00:00").getTime() + 1 * 60 * 60 * 1000;
                 const now = new Date();
                 const diff = now - targetDate; 
 
@@ -89,4 +89,5 @@
             updateCountdown();
         </script>
     </body>
+
 </html>
